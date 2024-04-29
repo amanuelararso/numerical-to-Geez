@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>GEEZ NUMBER CONVERTER</title>
-<body>
-<div>
-    <p>Here you can convert any English number to Geez (ግዕዝ) number</p>
-    <p>For example number 24 is equal to ፳፬ of Geez number</p>
-</div>
-
-
-<form action="change" method="post">
-    <label for="number"> enter a number :</label>
-    <input type="text" name="alphanumber"/>
-    <!-- the 'alphanumber' is a variable in 'changeatt'-->
-    <br> <br>
-    <button type="submit"> Change</button>
-</form>
-
-<p>result</p>
-<h1 th:text = "${numerical} +' = '+${number}"></h1>
+    <title>Convert to Geez number</title>
+    <link rel="stylesheet" href="styles.css">
+    <body>
+        <div id="main">
+            <p>Convert any <span id="numeral1">Arabic numerals</span>  to <span id="geez1">Geez (ግዕዝ)</span> number</p>
+            <p> Example: number <span id="numeral2">24</span> is equal to <span id="geez2">፳፬</span> of Geez number</p>
 
 
 
-</body>
+            <form action="convert" method="post">
+                <label for="number"> Enter any number to convert:</label>
+                <input type="text" name="numericalNumber"/>
+                <!-- the 'numericalNumber' is a variable in 'changeToGeez.java'-->
+                <br> <br>
+<!--                <button type="submit" id="btn"> CONVERT</button>-->
+            </form>
+
+            <p>RESULT</p>
+            <h1 th:text = "${numerical} +' = '+${number}"></h1>
+
+             <a href="https://www.linkedin.com/in/amanuel-ararso/" class="footer"> Amanuel</a>
+
+        </div>
+    </body>
 </head>
 </html>

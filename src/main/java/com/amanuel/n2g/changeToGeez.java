@@ -6,13 +6,13 @@ package com.amanuel.n2g;
 
 public class changeToGeez {
 
-    private int alphanumber;
+    private int numericalNumber;
 
-    public void setAlphanumber(int num) {
-        alphanumber = num;
+    public void setNumericalNumber(int num) {
+        numericalNumber = num;
     }
-    public int getAlphanumber () {
-        return alphanumber;
+    public int getNumericalNumber() {
+        return numericalNumber;
     }
 
 }

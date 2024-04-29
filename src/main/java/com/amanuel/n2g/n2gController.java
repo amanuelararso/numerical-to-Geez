@@ -12,7 +12,7 @@ public class n2gController {
     private String geezNumber = "";
     wedeGeez geez = new wedeGeez();
 
-    //this section is shown when the default page is loaded
+    //this section is shown for the first time
     // default value of numerical and the Geez representation is set, so that it will not be just null
     @GetMapping("/")
     public String hello ( Model model) {
@@ -22,10 +22,10 @@ public class n2gController {
     }
 
     //this section will be excuted after user filled the input box
-    @PostMapping("/change")
+    @PostMapping("/convert")
     public String c2G(@ModelAttribute changeToGeez att, Model model) {
-        geezNumber = geez.ቀይር(att.getAlphanumber());
-        model.addAttribute("numerical", att.getAlphanumber());
+        geezNumber = geez.ቀይር(att.getNumericalNumber());
+        model.addAttribute("numerical", att.getNumericalNumber());
         model.addAttribute("number", geezNumber);
         return "index"; // reloads the page with the new numerical value and the Geez counterpart
     }
