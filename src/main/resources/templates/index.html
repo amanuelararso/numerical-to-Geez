@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>GEEZ NUMBER CONVERTER</title>
+<body>
+<div>
+    <p>Here you can convert any English number to Geez (ግዕዝ) number</p>
+    <p>For example number 24 is equal to ፳፬ of Geez number</p>
+</div>
+
+
+<form action="change" method="post">
+    <label for="number"> enter a number :</label>
+    <input type="text" name="alphanumber"/>
+    <!-- the 'alphanumber' is a variable in 'changeatt'-->
+    <br> <br>
+    <button type="submit"> Change</button>
+</form>
+
+<p>result</p>
+<h1 th:text = "${numerical} +' = '+${number}"></h1>
+
+
+
+</body>
+</head>
+</html>
